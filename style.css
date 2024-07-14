@@ -1,82 +1,70 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+
+    background-color: #FFE6E6; /* Soft pink */
+    border-color: #FFC0CB; /* Pastel pink */
+    box-shadow: 0px 0px 10px rgba(255, 192, 203, 0.1);
   }
+  
   .Calculator {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #3a4452;
-    padding: 25px;
-    border-radius: 10px;
-    width: 250px;
+    grid-gap: 20px;
   }
-  Calculator input {
-    border: 0;
-    outline: 0;
-    width: 80px; /* Increased width */
-    height: 80px; /* Increased height */
-    border-radius: 40px; /* Increased border radius */
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px rgba(0, 0, 0, 0.2);
-    font-size: 35px; /* Increased font size */
-    margin: 1px; /* Reduced margin */
+  
+  .row {
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  input[type="button"] {
+    font-size: 18px;
+    padding: 35px;
+
+    background-color: #FFC5C5; /* Light coral */
+    color: #666666; /* Dark gray */
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    box-sizing: border-box;
   }
   
-  .row input[type="button"] {
-    background-color: #2f3841;
-    margin: 1px; /* Increased margin for spacing between buttons */
-    width: 50px; /* Matched width with the input buttons */
-    height: 40px; /* Matched height with the input buttons */
-    border-radius: 20px; /* Matched border radius with the input buttons */
+  input[type="button"]:hover {
+    background-color: #FF99CC; /* Pastel coral */
   }
   
-  
-  
-
-  form.display {
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px 0;
-  }
-  form.display input {
+  #display {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 75px;
+    background-color: #FFFFFF; /* White */
+    border-color: #FFC0CB; /* Pastel pink */
+    font-size: 24px;
+    font-weight: bold;
     text-align: right;
-    min-width: 150px;
-    font-size: 45px;
-    box-shadow: none;
-  }
-  form input.equal {
-    width: 165px;
-  }
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
 
-  .form-container {
-    width: 400px;
-    height: 300px;
-    
   }
-    
-  /* Added media queries for responsiveness */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      align-items: center;
-    }
-    .Calculator {
-      width: 100%;
-    }
-}
-.row {
-  flex-direction: column;
-}
-
-
-   
+  
+  .equal-sign {
+    background-color: #da72a6; /* Hot pink */
+    color: #FFFFFF; /* White */
+    padding: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 70px;
+    width: 48%;
+  }
   
   
+  .equal:hover {
+    background-color: #FF33CC; /* Bright pink */
+  }
   
-
-
+  

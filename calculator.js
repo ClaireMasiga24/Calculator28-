@@ -1,40 +1,44 @@
+// Select the display element
+const display = document.getElementById("display");
 
+// Select all the button elements
+const buttons = document.querySelectorAll(".button");
 
+// Add event listeners to the buttons
+buttons.forEach(button => {
+  button.addEventListener("click", handleButtonClick);
+});
+
+// Define the handleButtonClick function
+function handleButtonClick(event) {
+  const buttonText = event.target.value;
+  if (buttonText === "=") {
+    evaluateExpression();
+  } else {
+    displayValue(buttonText);
+  }
+}
+
+// Define the displayValue function
 function displayValue(value) {
-  document.getElementById("display").value += value;
+  display.value += value;
+  evaluateExpression();
 }
 
+// Define the evaluateExpression function
 function evaluateExpression() {
-  var expression = document.getElementById("display").value;
-  var result = eval(expression);
-  document.getElementById("display").value = result;
+  const expression = display.value;
+  const result = eval(expression); // Using eval to evaluate the expression
+  display.value = result;
+  
 }
 
+// Define the clearDisplay function
 function clearDisplay() {
-  document.getElementById("display").value = "";
+  display.value = "";
 }
 
+// Define the deleteLastChar function
 function deleteLastChar() {
-  var display = document.getElementById("display");
   display.value = display.value.slice(0, -1);
-
-
-- displayValue(value);
-- evaluateExpression();
-- clearDisplay();
-- deleteLastChar();
 }
-function add() {
-    const num1 = parseFloat(inputField.value);
-    const num2 = parseFloat(inputField.value);
-    const result = num1 + num2;
-    resultField.value = result;
-  }
-  
-  function subtract() {
-    const num1 = parseFloat(inputField.value);
-    const num2 = parseFloat(inputField.value);
-    const result = num1 - num2;
-    resultField.value = result;
-  }
-  
