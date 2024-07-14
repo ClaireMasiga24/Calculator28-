@@ -21,8 +21,7 @@ function handleButtonClick(event) {
 
 // Define the displayValue function
 function displayValue(value) {
-  display.value += value;
-  evaluateExpression();
+    display.value += value;
 }
 
 // Define the evaluateExpression function

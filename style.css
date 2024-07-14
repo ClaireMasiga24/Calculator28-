@@ -31,6 +31,18 @@
        cursor: pointer;
        box-sizing: border-box;
      }
+     .operator-button{
+        font-size: 30px; /* Even larger font size */
+        padding: 10px;
+        width: 25%;
+        background: color #f3c !important;;
+     }
+     .operators{
+        font-size: 30px; /* Even larger font size */
+        padding: 10px;
+        width: 30%;
+        background: color #f3c !important;;
+     }
      
      input[type="button"]:hover {
        background-color: #FF99CC; /* Pastel coral */
